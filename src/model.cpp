@@ -129,3 +129,26 @@ void model::export_to_file(string filename)
 
     myfile.close();
 }
+
+void model::import(string filename)
+{
+    ifstream iFile(filename);
+
+    if (!iFile.is_open())
+        throw runtime_error("Cannot open file: " + filename);
+
+    string line;
+    if (!getline(iFile, line))
+        throw runtime_error("Empty or invalid CSV file: " + filename);
+
+    if (line != "I ANOUAR APPROVE THIS FILE!!")
+    {
+        throw runtime_error("The file is corrupted or not approved");
+    }
+
+    getline(iFile, line);
+
+    int weight_count = string_to_vector(w, line, ",", 0);
+
+    cout << weight_count << "WEIGHTS LOADED SUCCESSFULLY !!" << endl;
+}

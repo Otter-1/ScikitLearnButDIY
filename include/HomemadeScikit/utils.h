@@ -19,4 +19,5 @@ vector<double> operator*(const double n, const vector<double> &v);
 // String utilities
 bool ends_with(string m, string s);
 
+int string_to_vector(vector<double> &v, const string &line, const string separator, int next);
 #endif // HOMEMADESCIKIT_UTILS_H

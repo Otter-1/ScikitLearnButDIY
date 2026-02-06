@@ -55,6 +55,8 @@ public:
 
     /** @brief Export model to file */
     void export_to_file(string);
+
+    void import(string);
 };
 
 #endif // HOMEMADESCIKIT_MODEL_H

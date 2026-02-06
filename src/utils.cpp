@@ -75,3 +75,16 @@ bool ends_with(string m, string s)
         return false;
     return (0 == m.compare(m.length() - s.length(), s.length(), s));
 }
+
+int string_to_vector(vector<double> &v, const string &line, const string separator, int start)
+{
+    if (start == line.length())
+        return 0;
+    int comma = line.find(separator, start);
+    if (comma == std::string::npos)
+        return 0;
+    int count = string_to_vector(v, line, separator, comma + 1);
+    long current = stol(line.substr(start, comma));
+    v.push_back(current);
+    return 1 + count;
+}

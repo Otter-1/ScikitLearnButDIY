@@ -31,7 +31,7 @@ int main()
         m.train({.algo = "gradient", .epochs = 1000, .step = 0.001});
 
         // Make predictions
-        vector<double> testInput = {1.0, 2.0};
+        vector<double> testInput = {1.0, 2.0, 4, 5};
         cout << "Prediction: " << m.predict(testInput) << endl;
 
         // Export model
