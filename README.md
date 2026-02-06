@@ -151,10 +151,6 @@ feature1,feature2,target
 - [ ] Feature scaling utilities
 - [ ] Model evaluation metrics
 
-## License
-
-MIT License
-
 ## Author
 
-Anouar
+Anouar ( Me!! )
